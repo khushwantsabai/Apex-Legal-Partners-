@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet our attorneys at Apex LEGAL PARTNER. Experienced professionals dedicated to your success.">
+  <title>Our Attorneys | Apex LEGAL PARTNER</title>
+  
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    .page-hero {
+      background-color: var(--navy-primary);
+      background: linear-gradient(135deg, rgba(27, 42, 74, 0.95) 0%, rgba(13, 27, 42, 0.95) 100%), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+      padding: 160px 0 100px;
+      color: var(--white);
+      text-align: center;
+    }
+    .breadcrumb { margin-bottom: 20px; font-size: 14px; color: var(--gray-light); }
+    .breadcrumb a { color: var(--white); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-accent); }
+    .page-hero h1 { font-size: 48px; margin-bottom: 15px; }
+    
+    .attorneys-section {
+      padding: 100px 0;
+      background-color: var(--off-white);
+    }
+    .attorneys-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .attorney-card {
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      text-align: center;
+    }
+    .attorney-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .attorney-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .attorney-info {
+      padding: 30px 20px;
+    }
+    .attorney-info h3 {
+      font-family: var(--font-display);
+      color: var(--navy-primary);
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    .attorney-info .title {
+      color: var(--gold-accent);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .attorney-info p {
+      color: var(--gray-pillar);
+      font-size: 15px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 1024px) {
+      .attorneys-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .attorneys-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li class="has-dropdown">
+        <a href="practice-areas.html" class="nav-link">Practice Areas ›</a>
+        <ul class="dropdown-menu">
+          <li><a href="practice-areas.html#corporate">Corporate Law</a></li>
+          <li><a href="practice-areas.html#litigation">Litigation</a></li>
+          <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+          <li><a href="practice-areas.html#family">Family Law</a></li>
+          <li><a href="practice-areas.html#criminal">Criminal Defense</a></li>
+          <li><a href="practice-areas.html#estate">Estate Planning</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="attorneys.html" class="nav-link active">Our Attorneys</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
+    <div class="mobile-contact">📞 +1 (800) APEX-LAW</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <svg class="logo-img" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 100 L95 20 L115 55" stroke="currentColor" stroke-width="12" fill="none" stroke-linejoin="miter"/>
+            <path d="M70 65 L105 65" stroke="currentColor" stroke-width="12"/>
+            <path d="M40 100 L60 100" stroke="currentColor" stroke-width="4"/>
+            <polygon points="120,40 140,20 160,40" fill="#6B7280"/>
+            <rect x="115" y="42" width="50" height="6" fill="#6B7280"/>
+            <rect x="120" y="50" width="40" height="6" fill="#6B7280"/>
+            <rect x="125" y="58" width="6" height="34" fill="#9CA3AF"/>
+            <rect x="137" y="58" width="6" height="34" fill="#9CA3AF"/>
+            <rect x="149" y="58" width="6" height="34" fill="#9CA3AF"/>
+            <rect x="120" y="94" width="40" height="6" fill="#6B7280"/>
+            <text x="180" y="80" font-family="'Playfair Display', serif" font-size="64" fill="currentColor" font-weight="bold" letter-spacing="2">APEX</text>
+            <line x1="175" y1="115" x2="195" y2="115" stroke="#9CA3AF" stroke-width="2"/>
+            <text x="205" y="119" font-family="'Cormorant Garamond', serif" font-size="16" fill="#6B7280" letter-spacing="3">LEGAL PARTNER</text>
+            <line x1="360" y1="115" x2="380" y2="115" stroke="#9CA3AF" stroke-width="2"/>
+            <text x="265" y="140" font-family="'Inter', sans-serif" font-size="8" fill="currentColor" letter-spacing="2" text-anchor="middle">ADVICE. ADVOCACY. RESULTS.</text>
+          </svg>
+        </a>
+      </div>
+      
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="has-dropdown">
+            <a href="practice-areas.html" class="nav-link">Practice Areas</a>
+            <ul class="dropdown-menu">
+              <li><a href="practice-areas.html#corporate">Corporate Law</a></li>
+              <li><a href="practice-areas.html#litigation">Litigation</a></li>
+              <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+              <li><a href="practice-areas.html#family">Family Law</a></li>
+              <li><a href="practice-areas.html#criminal">Criminal Defense</a></li>
+              <li><a href="practice-areas.html#estate">Estate Planning</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="attorneys.html" class="nav-link active">Attorneys</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">📞 Schedule Now</a>
+      </nav>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> &nbsp;>&nbsp; Our Attorneys
+        </div>
+        <h1>Meet Our Legal Team</h1>
+        <p>Unmatched expertise and steadfast dedication.</p>
+      </div>
+    </section>
+
+    <!-- Attorneys Section -->
+    <section class="attorneys-section">
+      <div class="container reveal">
+        <div class="attorneys-grid">
+          
+          <div class="attorney-card">
+            <img class="attorney-image" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Matt Ridley" loading="lazy">
+            <div class="attorney-info">
+              <h3>Matt Ridley</h3>
+              <div class="title">Managing Partner</div>
+              <p>With over 20 years of experience in corporate litigation, Matt has successfully led Apex LEGAL PARTNER to numerous landmark victories. He focuses on complex commercial disputes.</p>
+              <a href="contact.html" class="btn-link">Contact Matt →</a>
+            </div>
+          </div>
+
+          <div class="attorney-card">
+            <img class="attorney-image" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Sarah Jenkins" loading="lazy">
+            <div class="attorney-info">
+              <h3>Sarah Jenkins</h3>
+              <div class="title">Senior Partner</div>
+              <p>Sarah is a recognized expert in family law and estate planning. Her compassionate approach and fierce advocacy ensure clients receive the best possible outcomes.</p>
+              <a href="contact.html" class="btn-link">Contact Sarah →</a>
+            </div>
+          </div>
+
+          <div class="attorney-card">
+            <img class="attorney-image" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" alt="James Lawson" loading="lazy">
+            <div class="attorney-info">
+              <h3>James Lawson</h3>
+              <div class="title">Partner</div>
+              <p>James leads our criminal defense practice. A former state prosecutor, he brings invaluable insight into the justice system and relentlessly defends his clients' rights.</p>
+              <a href="contact.html" class="btn-link">Contact James →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand reveal">
+        <h3 style="font-family:'Playfair Display';font-size:32px;margin-bottom:10px;">APEX</h3>
+        <div class="footer-tagline">Advice. Advocacy. Results.</div>
+        <p class="footer-desc">Your trusted legal partner since 1999. Serving clients nationwide with integrity, expertise, and dedication.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      
+      <div class="footer-col reveal">
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="attorneys.html">Our Attorneys</a></li>
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="#">Case Results</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reveal">
+        <h4>PRACTICE AREAS</h4>
+        <ul>
+          <li><a href="practice-areas.html#corporate">Corporate Law</a></li>
+          <li><a href="practice-areas.html#litigation">Litigation</a></li>
+          <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+          <li><a href="practice-areas.html#family">Family Law</a></li>
+          <li><a href="practice-areas.html#criminal">Criminal Defense</a></li>
+          <li><a href="practice-areas.html#estate">Estate Planning</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reveal">
+        <h4>CONTACT US</h4>
+        <ul class="footer-contact">
+          <li>📍 <div>123 Justice Ave<br>Suite 900<br>New York, NY 10001</div></li>
+          <li>📞 <div>+1 (800) APEX-LAW</div></li>
+          <li>✉ <div>info@apexlegal.com</div></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 Apex LEGAL PARTNER. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Terms of Service</a> | 
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

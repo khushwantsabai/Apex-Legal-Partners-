@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Apex LEGAL PARTNER. Schedule a free consultation today.">
+  <title>Contact Us | Apex LEGAL PARTNER</title>
+  
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    .page-hero {
+      background-color: var(--navy-primary);
+      background: linear-gradient(135deg, rgba(27, 42, 74, 0.95) 0%, rgba(13, 27, 42, 0.95) 100%), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+      padding: 160px 0 100px;
+      color: var(--white);
+      text-align: center;
+    }
+    .breadcrumb { margin-bottom: 20px; font-size: 14px; color: var(--gray-light); }
+    .breadcrumb a { color: var(--white); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold-accent); }
+    .page-hero h1 { font-size: 48px; margin-bottom: 15px; }
+    
+    .contact-section {
+      padding: 100px 0;
+      background-color: var(--white);
+    }
+    .contact-container {
+      display: flex;
+      gap: 60px;
+    }
+    .contact-info { flex: 1; }
+    .contact-info h2 { font-size: 36px; color: var(--navy-primary); margin-bottom: 25px; }
+    .contact-info p { font-size: 16px; color: var(--gray-pillar); margin-bottom: 30px; line-height: 1.8; }
+    
+    .contact-details { margin-bottom: 40px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+    .contact-item svg {
+      width: 24px; height: 24px; color: var(--gold-accent); flex-shrink: 0; margin-top: 5px;
+    }
+    .contact-item h4 { font-family: var(--font-body); font-size: 18px; color: var(--navy-primary); margin-bottom: 5px; }
+    .contact-item p { margin-bottom: 0; font-size: 15px; }
+
+    .contact-form-container {
+      flex: 1;
+      background: var(--off-white);
+      padding: 40px;
+      border-radius: 4px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--navy-primary); margin-bottom: 8px; }
+    .form-control {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #D1D5DB;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      transition: var(--transition);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold-accent);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2);
+    }
+    textarea.form-control { resize: vertical; min-height: 120px; }
+    
+    /* Form Status */
+    .form-message {
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 4px;
+      display: none;
+      font-weight: 600;
+    }
+    .form-message.success {
+      display: block;
+      background-color: #D1FAE5;
+      color: #065F46;
+      border: 1px solid #34D399;
+    }
+    .form-message.error {
+      display: block;
+      background-color: #FEE2E2;
+      color: #991B1B;
+      border: 1px solid #F87171;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container { flex-direction: column; }
+      .contact-form-container { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li class="has-dropdown">
+        <a href="practice-areas.html" class="nav-link">Practice Areas ›</a>
+        <ul class="dropdown-menu">
+          <li><a href="practice-areas.html#corporate">Corporate Law</a></li>
+          <li><a href="practice-areas.html#litigation">Litigation</a></li>
+          <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+          <li><a href="practice-areas.html#family">Family Law</a></li>
+          <li><a href="practice-areas.html#criminal">Criminal Defense</a></li>
+          <li><a href="practice-areas.html#estate">Estate Planning</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="attorneys.html" class="nav-link">Our Attorneys</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
+    <div class="mobile-contact">📞 +1 (800) APEX-LAW</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+          <svg class="logo-img" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 100 L95 20 L115 55" stroke="currentColor" stroke-width="12" fill="none" stroke-linejoin="miter"/>
+            <path d="M70 65 L105 65" stroke="currentColor" stroke-width="12"/>
+            <path d="M40 100 L60 100" stroke="currentColor" stroke-width="4"/>
+            <polygon points="120,40 140,20 160,40" fill="#6B7280"/>
+            <rect x="115" y="42" width="50" height="6" fill="#6B7280"/>
+            <rect x="120" y="50" width="40" height="6" fill="#6B7280"/>
+            <rect x="125" y="58" width="6" height="34" fill="#9CA3AF"/>
+            <rect x="137" y="58" width="6" height="34" fill="#9CA3AF"/>
+            <rect x="149" y="58" width="6" height="34" fill="#9CA3AF"/>
+            <rect x="120" y="94" width="40" height="6" fill="#6B7280"/>
+            <text x="180" y="80" font-family="'Playfair Display', serif" font-size="64" fill="currentColor" font-weight="bold" letter-spacing="2">APEX</text>
+            <line x1="175" y1="115" x2="195" y2="115" stroke="#9CA3AF" stroke-width="2"/>
+            <text x="205" y="119" font-family="'Cormorant Garamond', serif" font-size="16" fill="#6B7280" letter-spacing="3">LEGAL PARTNER</text>
+            <line x1="360" y1="115" x2="380" y2="115" stroke="#9CA3AF" stroke-width="2"/>
+            <text x="265" y="140" font-family="'Inter', sans-serif" font-size="8" fill="currentColor" letter-spacing="2" text-anchor="middle">ADVICE. ADVOCACY. RESULTS.</text>
+          </svg>
+        </a>
+      </div>
+      
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="has-dropdown">
+            <a href="practice-areas.html" class="nav-link">Practice Areas</a>
+            <ul class="dropdown-menu">
+              <li><a href="practice-areas.html#corporate">Corporate Law</a></li>
+              <li><a href="practice-areas.html#litigation">Litigation</a></li>
+              <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+              <li><a href="practice-areas.html#family">Family Law</a></li>
+              <li><a href="practice-areas.html#criminal">Criminal Defense</a></li>
+              <li><a href="practice-areas.html#estate">Estate Planning</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="attorneys.html" class="nav-link">Attorneys</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">📞 Schedule Now</a>
+      </nav>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> &nbsp;>&nbsp; Contact Us
+        </div>
+        <h1>Get in Touch</h1>
+        <p>Schedule a confidential consultation with our attorneys.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container contact-container reveal">
+        <div class="contact-info">
+          <h2>We Are Here to Help</h2>
+          <p>Whether you're facing a complex corporate dispute or need personal legal guidance, our team is ready to listen. Contact us today to discuss how we can assist you.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
+                <h4>Office Location</h4>
+                <p>123 Justice Ave, Suite 900<br>New York, NY 10001</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <h4>Phone</h4>
+                <p>+1 (800) APEX-LAW<br>+1 (555) 123-4567</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div>
+                <h4>Email</h4>
+                <p>consultations@apexlegal.com<br>info@apexlegal.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 123-4567">
+            </div>
+            
+            <div class="form-group">
+              <label for="practice-area">Area of Interest</label>
+              <select id="practice-area" name="practice-area" class="form-control">
+                <option value="">Select a practice area...</option>
+                <option value="corporate">Corporate Law</option>
+                <option value="litigation">Litigation</option>
+                <option value="real-estate">Real Estate</option>
+                <option value="family">Family Law</option>
+                <option value="criminal">Criminal Defense</option>
+                <option value="estate">Estate Planning</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">How can we help you?</label>
+              <textarea id="message" name="message" class="form-control" required placeholder="Briefly describe your situation..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <div id="form-status" class="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand reveal">
+        <h3 style="font-family:'Playfair Display';font-size:32px;margin-bottom:10px;">APEX</h3>
+        <div class="footer-tagline">Advice. Advocacy. Results.</div>
+        <p class="footer-desc">Your trusted legal partner since 1999. Serving clients nationwide with integrity, expertise, and dedication.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      
+      <div class="footer-col reveal">
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="attorneys.html">Our Attorneys</a></li>
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="#">Case Results</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reveal">
+        <h4>PRACTICE AREAS</h4>
+        <ul>
+          <li><a href="practice-areas.html#corporate">Corporate Law</a></li>
+          <li><a href="practice-areas.html#litigation">Litigation</a></li>
+          <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+          <li><a href="practice-areas.html#family">Family Law</a></li>
+          <li><a href="practice-areas.html#criminal">Criminal Defense</a></li>
+          <li><a href="practice-areas.html#estate">Estate Planning</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reveal">
+        <h4>CONTACT US</h4>
+        <ul class="footer-contact">
+          <li>📍 <div>123 Justice Ave<br>Suite 900<br>New York, NY 10001</div></li>
+          <li>📞 <div>+1 (800) APEX-LAW</div></li>
+          <li>✉ <div>info@apexlegal.com</div></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 Apex LEGAL PARTNER. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Terms of Service</a> | 
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
