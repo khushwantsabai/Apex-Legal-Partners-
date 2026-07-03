@@ -136,6 +136,16 @@ body.fade-out {
   to { opacity: 0; transform: translateY(10px); }
 }
 
+/* --- DRAFT PAGES HIDDEN --- */
+/* The user requested to hide About, Attorneys, and Contact pages for now */
+li:has(a[href="about.html"]),
+li:has(a[href="attorneys.html"]),
+li:has(a[href="contact.html"]),
+a[href="contact.html"].btn {
+  display: none !important;
+}
+/* -------------------------- */
+
 /* Responsive Globals */
 @media (max-width: 768px) {
   :root {
