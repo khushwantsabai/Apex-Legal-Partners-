@@ -65,16 +65,24 @@
 
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   margin-top: 25px;
 }
-.social-links a {
+.social-links a.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--gray-light);
-  font-size: 20px;
   transition: var(--transition);
 }
-.social-links a:hover {
-  color: var(--gold-accent);
+.social-links a.social-icon:hover {
+  background-color: var(--gold-accent);
+  color: var(--navy-primary);
+  transform: translateY(-3px);
 }
 
 .footer-bottom {
