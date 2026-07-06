@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet our attorneys at Apex LEGAL PARTNER. Experienced professionals dedicated to your success.">
-  <title>Our Attorneys | Apex LEGAL PARTNER</title>
+  <meta name="description" content="Case Results from Apex LEGAL PARTNER. See our track record of success.">
+  <title>Case Results | Apex LEGAL PARTNER</title>
   
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
@@ -23,61 +23,66 @@
     .breadcrumb a:hover { color: var(--gold-accent); }
     .page-hero h1 { font-size: 48px; margin-bottom: 15px; }
     
-    .attorneys-section {
+    .results-section {
       padding: 100px 0;
       background-color: var(--off-white);
     }
-    .attorneys-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-    .attorney-card {
-      background: var(--white);
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: var(--transition);
+    .results-intro {
       text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
     }
-    .attorney-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    .results-intro h2 { font-size: 36px; color: var(--navy-primary); margin-bottom: 20px; }
+    .results-intro p { color: var(--gray-pillar); font-size: 16px; line-height: 1.6; }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
     }
-    .attorney-image {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
+    
+    .result-card {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 4px;
+      box-shadow: var(--card-shadow);
+      border-top: 4px solid var(--gold-accent);
+      transition: var(--transition);
     }
-    .attorney-info {
-      padding: 30px 20px;
-    }
-    .attorney-info h3 {
+    .result-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(27, 42, 74, 0.15); }
+    
+    .result-amount {
       font-family: var(--font-display);
-      color: var(--navy-primary);
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-    .attorney-info .title {
+      font-size: 42px;
       color: var(--gold-accent);
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      font-weight: 600;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: block;
     }
-    .attorney-info p {
-      color: var(--gray-pillar);
-      font-size: 15px;
-      margin-bottom: 20px;
+    .result-type {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--gray-light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .result-desc {
+      color: var(--navy-primary);
+      font-size: 16px;
       line-height: 1.6;
     }
     
-    @media (max-width: 1024px) {
-      .attorneys-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .attorneys-grid { grid-template-columns: 1fr; }
+    .disclaimer-text {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--gray-light);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -99,7 +104,7 @@
         </ul>
       </li>
       <li><a href="about.html" class="nav-link">About Us</a></li>
-      <li><a href="attorneys.html" class="nav-link active">Our Attorneys</a></li>
+      <li><a href="attorneys.html" class="nav-link">Our Attorneys</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
     <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
@@ -146,7 +151,7 @@
             </ul>
           </li>
           <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="attorneys.html" class="nav-link active">Attorneys</a></li>
+          <li><a href="attorneys.html" class="nav-link">Attorneys</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <a href="contact.html" class="btn btn-primary">📞 Schedule Now</a>
@@ -162,47 +167,66 @@
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="container reveal">
-<h1>Meet Our Legal Team</h1>
-        <p>Unmatched expertise and steadfast dedication.</p>
+        <h1>Proven Results</h1>
+        <p>A track record of multi-million dollar verdicts and favorable settlements.</p>
       </div>
     </section>
 
-    <!-- Attorneys Section -->
-    <section class="attorneys-section">
+    <!-- Results Section -->
+    <section class="results-section">
       <div class="container reveal">
-        <div class="attorneys-grid">
-          
-          <div class="attorney-card">
-            <img class="attorney-image" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Matt Ridley" loading="lazy">
-            <div class="attorney-info">
-              <h3>Matt Ridley</h3>
-              <div class="title">Managing Partner</div>
-              <p>With over 20 years of experience in corporate litigation, Matt has successfully led Apex LEGAL PARTNER to numerous landmark victories. He focuses on complex commercial disputes.</p>
-              <a href="contact.html" class="btn-link">Contact Matt →</a>
-            </div>
-          </div>
-
-          <div class="attorney-card">
-            <img class="attorney-image" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Sarah Jenkins" loading="lazy">
-            <div class="attorney-info">
-              <h3>Sarah Jenkins</h3>
-              <div class="title">Senior Partner</div>
-              <p>Sarah is a recognized expert in family law and estate planning. Her compassionate approach and fierce advocacy ensure clients receive the best possible outcomes.</p>
-              <a href="contact.html" class="btn-link">Contact Sarah →</a>
-            </div>
-          </div>
-
-          <div class="attorney-card">
-            <img class="attorney-image" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" alt="James Lawson" loading="lazy">
-            <div class="attorney-info">
-              <h3>James Lawson</h3>
-              <div class="title">Partner</div>
-              <p>James leads our criminal defense practice. A former state prosecutor, he brings invaluable insight into the justice system and relentlessly defends his clients' rights.</p>
-              <a href="contact.html" class="btn-link">Contact James →</a>
-            </div>
-          </div>
-
+        <div class="results-intro">
+          <h2>Our Recent Victories</h2>
+          <p>At Apex LEGAL PARTNER, our history speaks for itself. We fight relentlessly for our clients, consistently delivering top-tier outcomes in the most complex, high-stakes matters across the nation.</p>
         </div>
+
+        <div class="results-grid">
+          <!-- Card 1 -->
+          <div class="result-card reveal">
+            <span class="result-amount">$14.5 Million</span>
+            <span class="result-type">Corporate Litigation</span>
+            <p class="result-desc">Jury verdict in a complex breach of fiduciary duty and shareholder derivative lawsuit on behalf of a minority shareholder.</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="result-card reveal">
+            <span class="result-amount">$8.2 Million</span>
+            <span class="result-type">Real Estate Dispute</span>
+            <p class="result-desc">Favorable settlement secured for a commercial real estate developer in a zoning and land use dispute with local municipalities.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="result-card reveal">
+            <span class="result-amount">Acquittal</span>
+            <span class="result-type">White-Collar Criminal Defense</span>
+            <p class="result-desc">Full acquittal on all federal fraud and embezzlement charges for a C-suite executive after a three-week jury trial.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="result-card reveal">
+            <span class="result-amount">$5.1 Million</span>
+            <span class="result-type">Business Torts</span>
+            <p class="result-desc">Arbitration award for a tech startup whose trade secrets were misappropriated by a former partner and competitor.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="result-card reveal">
+            <span class="result-amount">Full Custody</span>
+            <span class="result-type">High-Net-Worth Family Law</span>
+            <p class="result-desc">Secured full primary custody and a favorable asset division settlement in a highly contested, multi-state divorce proceeding.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="result-card reveal">
+            <span class="result-amount">$3.4 Million</span>
+            <span class="result-type">Trust & Estate Litigation</span>
+            <p class="result-desc">Successfully defended an executor against breach of duty claims, validating a highly contested multi-million dollar estate plan.</p>
+          </div>
+        </div>
+
+        <p class="disclaimer-text reveal">
+          *Disclaimer: The verdicts and settlements listed on this page are intended to be representative of cases handled by Apex LEGAL PARTNER. These listings are not a guarantee or prediction of the outcome of any other claims. Every case is unique and must be evaluated on its own merits.
+        </p>
       </div>
     </section>
   </main>
@@ -214,12 +238,6 @@
         <h3 style="font-family:'Playfair Display';font-size:32px;margin-bottom:10px;">APEX</h3>
         <div class="footer-tagline">Advice. Advocacy. Results.</div>
         <p class="footer-desc">Your trusted legal partner since 1999. Serving clients nationwide with integrity, expertise, and dedication.</p>
-        <div class="social-links">
-          <a href="#" aria-label="LinkedIn" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-          <a href="#" aria-label="Twitter" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
-          <a href="#" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
-          <a href="#" aria-label="Instagram" class="social-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        </div>
       </div>
       
       <div class="footer-col reveal">
